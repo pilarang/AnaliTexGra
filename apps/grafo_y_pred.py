@@ -24,8 +24,8 @@ from app import app
 
 #importar csv de la carpeta datasets
 sys.path.append('../')
-df_original = pd.read_csv('datasets/UNAM_Completo_Corregido.csv')
-#df_original = pd.read_csv(r'C:\Users\pilarang\0-ProyAcademicosGrafo-Integrado\3-AplicacionWebDash\datasets\UNAM_Completo_Corregido.csv')
+#df_original = pd.read_csv('datasets/UNAM_Completo_Corregido.csv')
+df_original = pd.read_csv(r'C:\Users\pilarang\0-ProyAcademicosGrafo-Integrado\3-AplicacionWebDash\datasets\UNAM_Completo_Corregido.csv')
 
 buffer_array = []
 buffer = io.BytesIO()
