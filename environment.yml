@@ -423,4 +423,3 @@ dependencies:
       - validators==0.35.0
       - werkzeug==3.0.6
       - wrapt==1.17.2
-prefix: C:\Users\pilarang\envs\EnvGraphAcademicos
