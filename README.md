@@ -1,69 +1,125 @@
 # AnaliTexGra
-## This project is a web application developed with Dash (a Python framework for building interactive dashboards).
-AnaliTexGra allows users to visualize academic data analysis through an interactive and easy-to-use interface.
-There is a small dataset to make it run.
-## Requirements
-Python 3.x
 
-Necessary packages (Dash, pandas, etc.)
+## Overview
+
+AnaliTexGra is a web application developed with Dash, a Python framework for building interactive data-driven applications.
+
+The application supports the exploration and analysis of academic collaboration data through an interactive interface. It integrates graph visualization, link prediction, text mining, and scientometric analysis to support the study of co-authorship networks and potential research collaborations.
+
+An anonymized institutional dataset is included in the repository to allow the application and the associated analyses to be reproduced.
+
+## Dataset
+
+The anonymized dataset included in the repository is located at:
+
+```text
+datasets/UNAM_Completo_Corregido_Anonimizado.csv
+```
+
+The dataset contains bibliographic and academic metadata used to construct the collaboration network and to support the structural and textual analyses implemented in AnaliTexGra.
+
+## Requirements
+
+The project uses a Conda environment. The complete software dependencies and exact library versions are specified in:
+
+```text
+environment.yml
+```
+
+The environment uses:
+
+```text
+Python 3.10.18
+```
+
+Main libraries include:
+
+- Dash
+- pandas
+- NumPy
+- scikit-learn
+- NetworkX
+- Plotly
+- TensorFlow
+- PyTorch
+- PyTorch Geometric
+
+The exact versions of these and all additional dependencies are specified in `environment.yml`.
 
 ## Installation
-Clone this repository:
 
+Clone the repository:
+
+```bash
 git clone https://github.com/pilarang/AnaliTexGra.git
 cd AnaliTexGra
-(Optional) Create and activate a virtual environment:
+```
 
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
-Install dependencies:
+Create the Conda environment:
 
-pip install -r requirements.txt
-How to run the application
+```bash
+conda env create -f environment.yml
+```
 
+Activate the environment:
+
+```bash
+conda activate EnvGraphAcademicos
+```
+
+## How to Run the Application
+
+Run:
+
+```bash
 python app.py
-Then open the URL displayed by Dash in your browser (usually http://127.0.0.1:8050).
+```
+
+Then open the URL displayed by Dash in your browser, usually:
+
+```text
+http://127.0.0.1:8050
+```
+
+## Reproducibility
+
+The repository provides:
+
+- the anonymized institutional dataset used by the public version of AnaliTexGra;
+- the source code of the application;
+- the scripts and computational components used for structural, textual, and link-prediction analyses; and
+- the complete Conda environment specification with exact software versions.
+
+The public anonymized dataset is:
+
+```text
+datasets/UNAM_Completo_Corregido_Anonimizado.csv
+```
+
+The computational environment is specified in:
+
+```text
+environment.yml
+```
+
+Git is used for version control so that the exact version of the code associated with experimental results can be identified through a commit hash.
+
+The current commit identifier can be obtained with:
+
+```bash
+git rev-parse HEAD
+```
 
 ## Notes
-This project is built using Dash, a Flask-based framework for creating interactive web applications in Python.
 
-For more information about Dash, visit: https://dash.plotly.com/
-Contact: pilarang@unam.mx for further information or questions.
+AnaliTexGra is built using Dash, a Flask-based framework for creating interactive web applications in Python.
 
-SPANISH;
-# AnaliTexGra
-## Este proyecto es una aplicación web desarrollada con Dash (framework de Python para crear dashboards interactivos).
+For more information about Dash, visit:
 
-AnaliTexGra permite visualizar análisis gráficos de datos académicos de forma interactiva y sencilla.
-Contiene un archivo precargado que sirve de ejemplo para funcionalidad.
-## Requisitos
-Python 3.x
+https://dash.plotly.com/
 
-Paquetes necesarios (Dash, pandas, etc.)
+## Contact
 
-## Instalación
-Clona este repositorio:
+For further information or questions:
 
-
-git clone https://github.com/pilarang/AnaliTexGra.git
-cd AnaliTexGra
-(Opcional) Crea un entorno virtual:
-
-
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
-Instala las dependencias:
-
-
-pip install -r requirements.txt
-Cómo ejecutar la aplicación
-
-python app.py
-Luego abre en tu navegador la URL que Dash indique (usualmente http://127.0.0.1:8050).
-Notas
-Este proyecto está desarrollado con Dash, un framework basado en Flask para construir aplicaciones web interactivas en Python.
-
-Para más información sobre Dash visita: https://dash.plotly.com/
-Contacto: pilarang@unam.mx para mas información.
+pilarang@unam.mx
